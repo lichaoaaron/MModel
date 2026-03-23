@@ -16,7 +16,11 @@ def standardize_error(msg: str) -> str:
 def run_batch_test_links():
     # 1. 确定扫描目录
     data_dir = Path("umodel_export") / "entity_set_link"
-    report_json = Path("entity_set_link_batch_test_report.json")
+    
+    # 修改输出位置到 output/ 文件夹
+    output_dir = Path("output")
+    output_dir.mkdir(exist_ok=True)
+    report_json = output_dir / "entity_set_link_batch_test_report.json"
 
     if not data_dir.exists():
         print(f"错误: 目录不存在 - {data_dir.absolute()}")

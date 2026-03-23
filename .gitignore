@@ -1,5 +1,6 @@
 # Created by pytest automatically.
 umodel_export/
+output/
 .pytest_cache/
 *.yaml
 *.yml
@@ -7,3 +8,5 @@ __pycache__/
 *.pyc
 *.pyo
 *.pyd
+*.json
+*.csv

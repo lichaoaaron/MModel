@@ -13,7 +13,11 @@ def standardize_error(msg: str) -> str:
 
 def run_batch_test_log_set():
     data_dir = Path("umodel_export") / "log_set"
-    report_json = Path("log_set_batch_test_report.json")
+    
+    # 修改输出位置到 output/ 文件夹
+    output_dir = Path("output")
+    output_dir.mkdir(exist_ok=True)
+    report_json = output_dir / "log_set_batch_test_report.json"
 
     if not data_dir.exists():
         print(f"错误: 目录不存在 - {data_dir.absolute()}")

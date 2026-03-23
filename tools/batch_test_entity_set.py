@@ -26,8 +26,13 @@ def standardize_error(msg: str) -> str:
 
 def run_batch_test():
     data_dir = Path("umodel_export") / "entity_set"
-    report_json = Path("entity_set_batch_test_report.json")
-    report_csv = Path("entity_set_batch_test_report.csv")
+    
+    # 修改输出位置到 output/ 文件夹
+    output_dir = Path("output")
+    output_dir.mkdir(exist_ok=True)
+    
+    report_json = output_dir / "entity_set_batch_test_report.json"
+    report_csv = output_dir / "entity_set_batch_test_report.csv"
 
     if not data_dir.exists():
         print(f"错误: 目录不存在 - {data_dir.absolute()}")
