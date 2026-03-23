@@ -1,0 +1,4 @@
+# Created by pytest automatically.
+umodel_export/
+*.yaml
+*.yml
