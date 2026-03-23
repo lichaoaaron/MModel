@@ -5,6 +5,8 @@ from typing import Optional
 class FieldDef:
     name: str
     type: str
+    display_name: Optional[str] = None
+    description: Optional[str] = None
 
 @dataclass
 class EntitySetDef:

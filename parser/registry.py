@@ -1,6 +1,8 @@
 from .entity_set_parser import parse_entity_set
 from .entity_set_link_parser import parse_entity_set_link
 from .log_set_parser import parse_log_set
+from .trace_set_parser import parse_trace_set
+from .metric_set_parser import parse_metric_set
 from .errors import ParseError
 
 def parse_definition(data: dict):
@@ -17,7 +19,11 @@ def parse_definition(data: dict):
         return parse_entity_set_link(data)
     elif kind == "log_set":
         return parse_log_set(data)
-    elif kind in ["metric_set", "trace_set", "event_set"]:
+    elif kind == "trace_set":
+        return parse_trace_set(data)
+    elif kind == "metric_set":
+        return parse_metric_set(data)
+    elif kind in ["event_set"]:
         # 预留占位符，后续实现
         raise ParseError(f"当前暂不支持解析 kind: {kind}，正在开发中")
     else:
