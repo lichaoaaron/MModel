@@ -1,4 +1,5 @@
 # Created by pytest automatically.
 umodel_export/
+.pytest_cache/
 *.yaml
 *.yml
