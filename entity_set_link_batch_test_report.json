@@ -1,0 +1,10 @@
+{
+    "summary": {
+        "total": 126,
+        "passed": 126,
+        "failed": 0,
+        "success_rate": "100.00%"
+    },
+    "grouped_errors": {},
+    "failed_files": []
+}

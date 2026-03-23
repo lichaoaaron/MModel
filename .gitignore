@@ -3,3 +3,7 @@ umodel_export/
 .pytest_cache/
 *.yaml
 *.yml
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
